@@ -1,0 +1,22 @@
+name: ApexPrison
+main: eu.apexmc.prison.main.ApexPrison
+version: 1.0
+authors: [HeriPutr, 4p3x]
+website: apexmc.eu
+commands:
+    apex:
+        description: ApexPrison base command.
+        usage: /<command>
+    block:
+        description: Block grouping command.
+        usage: /<command>
+    cc:
+        description: Admin chat clear command.
+        usage: /<command>
+permissions:
+    apex.apex:
+        description: Permission to use the /apex command.
+    apex.block:
+        description: Permission to use the /block command.
+    apex.admin.cc:
+        description: Permission to use the /cc command.
