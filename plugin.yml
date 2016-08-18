@@ -1,5 +1,5 @@
 name: ApexPrison
-main: eu.apexmc.prison.main.ApexPrison
+main: eu.apexmc.prison.main.Main
 version: 1.0
 authors: [HeriPutr, 4p3x]
 website: apexmc.eu
@@ -13,10 +13,6 @@ commands:
     cc:
         description: Admin chat clear command.
         usage: /<command>
-permissions:
-    apex.apex:
-        description: Permission to use the /apex command.
-    apex.block:
-        description: Permission to use the /block command.
-    apex.admin.cc:
-        description: Permission to use the /cc command.
+    smelt:
+        description: Ore smelting command.
+        usage: /<command>

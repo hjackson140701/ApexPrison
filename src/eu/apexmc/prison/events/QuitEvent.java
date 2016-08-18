@@ -5,25 +5,19 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import eu.apexmc.prison.main.ApexPrison;
-import eu.apexmc.prison.variables.Variables;
+import eu.apexmc.prison.main.Main;
+import net.md_5.bungee.api.ChatColor;
 
 public class QuitEvent implements Listener
 {
-	public QuitEvent(ApexPrison plugin)
+	public QuitEvent(Main plugin)
 	{
 		Bukkit.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 	@EventHandler
-	public void ApexHubQuitEvent(PlayerQuitEvent event)
+	public void PrisonQuitEvent(PlayerQuitEvent event)
 	{
-		/*
-		 * 		Variables
-		 */
 		String playerName = event.getPlayer().getName();
-		/*
-		 * 		Changing the default minecraft join message
-		 */
-		event.setQuitMessage(Variables.quitMessage + playerName);
+		event.setQuitMessage(ChatColor.DARK_GRAY + "[" + ChatColor.RED + "-" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + playerName);
 	}
 }
